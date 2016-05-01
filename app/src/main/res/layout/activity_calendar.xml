@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlmlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rl_bg"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/describe"
+        android:gravity="center"
+        android:src="@drawable/campus"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/rlm_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rl_imbt"
+        android:onClick="showCalendar"
+        android:text="@string/rlm_rl" />
+
+    <Button
+        android:id="@+id/rlm_rw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rl_imbt"
+        android:onClick="showTask"
+        android:text="@string/rlm_rw" />
+
+    <Button
+        android:id="@+id/rlm_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rl_imbt"
+        android:onClick="showRemind"
+        android:text="@string/rlm_tx" />
+
+</LinearLayout>

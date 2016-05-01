@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rwadlayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rw_bk1"
+        android:gravity="center"
+        android:text="@string/rw_add" />
+
+    <LinearLayout
+        android:id="@+id/rwadlayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rw_bk1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/rw_sjd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/rw1" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/rwa_rw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rw_bk2"
+        android:gravity="center"
+        android:hint="@string/rwa_edit"
+        android:minWidth="200dp" />
+
+    <ImageButton
+        android:id="@+id/rwa_qd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#0fff"
+        android:contentDescription="@string/describe"
+        android:src="@drawable/sure2"
+        android:text="@string/rwa_sure"
+        android:textSize="12sp" />
+
+</LinearLayout>

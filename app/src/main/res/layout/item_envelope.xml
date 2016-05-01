@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/xf" >
+    
+    <!-- 添加  信封  图片按钮 -->
+    
+    <ImageButton 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/xinfeng"
+         android:contentDescription="@string/describe"
+         android:background="#0fff"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        >
+        
+        <!-- 添加 总额 文本 -->
+        
+        <TextView 
+        	android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+       		android:text="@string/jk_zonge"
+       		android:textSize="12sp"
+        	android:layout_marginStart="5sp"
+        />
+        
+        <!-- 添加 显示总额 文本 -->
+        
+        <TextView 
+            android:id="@+id/xf_zonge"
+        	android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+       		android:textSize="12sp"
+        />
+        
+        <!-- 添加 余额 文本 -->
+        
+    	<TextView 
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/jk_yue"
+        	android:textSize="12sp"
+        	android:layout_marginStart="5sp"
+        />
+    	
+    	<!-- 添加 显示余额 文本 -->
+    	
+    	<TextView 
+    	    android:id="@+id/xf_yue"
+        	android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+       		android:textSize="12sp"
+        />
+    </LinearLayout>
+    
+
+</LinearLayout>

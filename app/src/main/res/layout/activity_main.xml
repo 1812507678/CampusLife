@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/act_bg"
+    android:orientation="vertical" >
+
+    <!-- 添加 小金库 图片按钮 -->
+
+    <LinearLayout
+         android:id="@+id/mainlayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp" >
+
+        <ImageButton
+             android:id="@+id/ib_main_xiaojinku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/jinku"
+            android:contentDescription="@string/describe" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainlayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal" >
+
+        <!-- 添加  随手记 图片按钮 -->
+
+        <ImageButton
+            android:id="@+id/ib_main_jiluxiangce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/xiangce"
+            android:contentDescription="@string/describe" />
+
+        <!-- 添加 相册 图片按钮 -->
+
+        <ImageButton
+            android:id="@+id/ib_main_bianqian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/suishouji"
+            android:contentDescription="@string/describe" />
+    </LinearLayout>
+
+    <!-- 添加 日历 图片按钮 -->
+
+    <LinearLayout
+        android:id="@+id/mainlayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp" >
+
+        <ImageButton
+            android:id="@+id/ib_main_shenghuorili"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shenghrl"
+            android:contentDescription="@string/describe" />
+    </LinearLayout>
+
+</LinearLayout>

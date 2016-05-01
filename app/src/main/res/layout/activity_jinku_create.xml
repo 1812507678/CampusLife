@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/jkclayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/jkc_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/jkclayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bg"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/jkc_huitui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#0fff"
+            android:contentDescription="@string/describe"
+            android:src="@drawable/huitui" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="@string/jk_edit"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/jkc_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#0fff"
+            android:contentDescription="@string/describe"
+            android:src="@drawable/add" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jkclayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jk_leibie"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/jkc_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/jk_hint.1"
+            android:minWidth="200sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jkclayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jk_zonge"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/jkc_ze"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/jk_hint.2"
+            android:minWidth="60sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:text="@string/jk_yue"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/jkc_ye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/jk_hint.3"
+            android:minWidth="60sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jkclayout5"
+        android:layout_width="300dp"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/jkclayout6"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/jk_rq" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/jk_hf" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/jk_xm" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/jkclayout7"
+            android:layout_width="fill_parent"
+            android:layout_height="250dp" >
+
+            <ListView
+                android:id="@+id/jk_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jkclayout8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp" >
+
+        <ImageButton
+            android:id="@+id/jkc_bj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0fff"
+            android:contentDescription="@string/describe"
+            android:src="@drawable/edit" />
+
+        <ImageButton
+            android:id="@+id/jkc_zj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:background="#0fff"
+            android:contentDescription="@string/describe"
+            android:src="@drawable/zengjia"
+            android:onClick="addjinkuiitem" />
+    </LinearLayout>
+
+</LinearLayout>

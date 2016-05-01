@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/jkcilayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <!-- 展示日期 -->
+
+    <TextView
+        android:id="@+id/jkci_rq"
+        android:layout_width="100dp"
+        android:layout_height="30dp" 
+        android:text="2016.4.29"/>
+    <!-- 展示花费 -->
+
+    <TextView
+        android:id="@+id/jkci_hf"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+         android:text="100元" />
+    <!-- 展示项目 -->
+
+    <TextView
+        android:id="@+id/jkci_xm"
+        android:layout_width="100dp"
+        android:layout_height="30dp" 
+        android:text="吃饭"/>
+
+
+</LinearLayout>
