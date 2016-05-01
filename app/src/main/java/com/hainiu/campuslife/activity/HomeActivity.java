@@ -11,7 +11,10 @@ import android.widget.ImageButton;
 
 import com.hainu.campuslife.R;
 
-public class MainActivity extends Activity {
+import cn.bmob.v3.Bmob;
+
+
+public class HomeActivity extends Activity {
 	private ImageButton ib_main_xiaojinku;
 	private ImageButton ib_main_bianqian;
 	private ImageButton ib_main_jiluxiangce;
@@ -26,9 +29,14 @@ public class MainActivity extends Activity {
         ib_main_bianqian = (ImageButton) findViewById(R.id.ib_main_bianqian);
         ib_main_jiluxiangce = (ImageButton) findViewById(R.id.ib_main_jiluxiangce);
         ib_main_shenghuorili = (ImageButton) findViewById(R.id.ib_main_shenghuorili);
-        
+
+		// 初始化 Bmob SDK
+		Bmob.initialize(this, "d8ce0167b5dcba386a96649b4d9ad0d6");
 
         initViewOnClick();
+
+
+
 
     }
 
@@ -37,7 +45,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(MainActivity.this,JinKuActivity.class));
+				startActivity(new Intent(HomeActivity.this,JinKuActivity.class));
 			}
 		});
 		
@@ -45,7 +53,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(MainActivity.this,BianQianActivity.class));
+				startActivity(new Intent(HomeActivity.this,BianQianActivity.class));
 			}
 		});
 		
@@ -53,7 +61,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(MainActivity.this,AlbumActivity.class));
+				startActivity(new Intent(HomeActivity.this,AlbumActivity.class));
 			}
 		});
 		
@@ -61,7 +69,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(MainActivity.this,CalendarActicivity.class));
+				startActivity(new Intent(HomeActivity.this,CalendarActicivity.class));
 			}
 		});
 		

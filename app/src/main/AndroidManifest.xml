@@ -2,71 +2,71 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hainu.campuslife">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name="com.hainiu.campuslife.activity.MainActivity"
-            android:label="@string/app_name" >
+
+        <activity android:name="com.hainiu.campuslife.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.hainiu.campuslife.activity.CalendarActicivity" >
+
+        <activity
+            android:name="com.hainiu.campuslife.activity.HomeActivity"
+            android:label="@string/app_name">
         </activity>
-        <activity android:name="com.hainiu.campuslife.activity.JinKuActivity" >
-        </activity>
-        <activity android:name="com.hainiu.campuslife.activity.BianQianActivity" >
-        </activity>
+        <activity android:name="com.hainiu.campuslife.activity.CalendarActicivity"></activity>
+        <activity android:name="com.hainiu.campuslife.activity.JinKuActivity"></activity>
+        <activity android:name="com.hainiu.campuslife.activity.BianQianActivity"></activity>
         <activity
             android:name="com.hainiu.campuslife.activity.AlbumActivity"
-            android:label="@string/title_activity_album" >
-        </activity>
+            android:label="@string/title_activity_album"></activity>
         <activity
             android:name="com.hainiu.campuslife.activity.CalendarManageActivity"
-            android:label="@string/title_activity_calendar_manage" >
-        </activity>
+            android:label="@string/title_activity_calendar_manage"></activity>
         <activity
             android:name="com.hainiu.campuslife.activity.TaskManageActivity"
-            android:label="@string/title_activity_task_manage" >
-        </activity>
+            android:label="@string/title_activity_task_manage"></activity>
         <activity
             android:name="com.hainiu.campuslife.activity.CalendarRemindActivity"
-            android:label="@string/title_activity_calendar_remind" >
-        </activity>
+            android:label="@string/title_activity_calendar_remind"></activity>
         <activity
             android:name="com.hainiu.campuslife.activity.JinkuAddActivity"
-            android:label="@string/title_activity_jinku_add" >
-        </activity>
+            android:label="@string/title_activity_jinku_add"></activity>
         <activity
             android:name="com.hainiu.campuslife.activity.AlbumInfoShowActivity"
-            android:label="@string/title_activity_album_info_show" >
-        </activity>
+            android:label="@string/title_activity_album_info_show"></activity>
         <activity
             android:name="com.hainiu.campuslife.activity.AddBianqianActivity"
-            android:label="@string/title_activity_add_bianqian" >
-        </activity>
+            android:label="@string/title_activity_add_bianqian"></activity>
         <activity
             android:name="com.hainiu.campuslife.activity.JinkuCreateActivity"
-            android:label="@string/title_activity_jinku_create" >
-        </activity>
+            android:label="@string/title_activity_jinku_create"></activity>
         <activity
             android:name="com.hainiu.campuslife.activity.JinkuInforShowActivity"
-            android:label="@string/title_activity_jinku_infor_show" >
-        </activity>
+            android:label="@string/title_activity_jinku_infor_show"></activity>
         <activity
             android:name="com.hainiu.campuslife.activity.TaskAddActivity"
-            android:label="@string/title_activity_task_add" >
-        </activity>
+            android:label="@string/title_activity_task_add"></activity>
         <activity
             android:name="com.hainiu.campuslife.activity.RemindAddActivity"
-            android:label="@string/title_activity_remind_add" >
-        </activity>
+            android:label="@string/title_activity_remind_add"></activity>
+        <activity android:name="com.hainiu.campuslife.activity.RegisterActivity"></activity>
+        <activity android:name="com.hainiu.campuslife.activity.RetrievePasswordActivity"></activity>
+
     </application>
 
 </manifest>
