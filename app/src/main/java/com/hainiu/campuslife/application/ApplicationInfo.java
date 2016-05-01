@@ -4,16 +4,19 @@ import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import com.hainiu.campuslife.bean.Student;
+
+import cn.bmob.v3.Bmob;
 
 /**
  * Created by haijun on 2016/5/1.
  */
 public class ApplicationInfo extends Application{
 
+    private static final String TAG = "ApplicationInfo";
     public static SharedPreferences sharedPreferences;
-    public static Context mContext;
     public static Student student;
 
 
@@ -21,8 +24,12 @@ public class ApplicationInfo extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
+        Log.i(TAG,"onCreate");
         sharedPreferences = getSharedPreferences("studentInfo", MODE_PRIVATE);
-        mContext = this;
+        Log.i(TAG,"onCreate");
+
+        // 初始化 Bmob SDK
+        Bmob.initialize(this, "d8ce0167b5dcba386a96649b4d9ad0d6");
     }
 
     //初始化用户数据

@@ -30,8 +30,7 @@ public class HomeActivity extends Activity {
         ib_main_jiluxiangce = (ImageButton) findViewById(R.id.ib_main_jiluxiangce);
         ib_main_shenghuorili = (ImageButton) findViewById(R.id.ib_main_shenghuorili);
 
-		// 初始化 Bmob SDK
-		Bmob.initialize(this, "d8ce0167b5dcba386a96649b4d9ad0d6");
+
 
         initViewOnClick();
 

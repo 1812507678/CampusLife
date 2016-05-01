@@ -3,22 +3,24 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:id="@+id/xcflayout" >
+    android:gravity="center"
+    android:background="@drawable/albumitem_back"
+    android:padding="5dp" >
     
     <ImageView
-        android:id="@+id/xcf_imgv" 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/iv_albumitem_iamge"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         android:src="@drawable/xc"
         android:background="#0fff"
         android:contentDescription="@string/describe"/>
     
-    <EditText 
-        android:id="@+id/xcf_mc"
+    <TextView
+        android:id="@+id/tv_albumitem_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:hint="@string/xcf_mc"
-        android:minWidth="50dp"
         android:layout_gravity="center"
         />
 
