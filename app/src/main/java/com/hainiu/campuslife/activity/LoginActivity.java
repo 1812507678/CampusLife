@@ -142,10 +142,11 @@ public class LoginActivity extends Activity {
                     boolean checked = ck_login_savepassword.isChecked();
                     //选择记住密码，保存SharedPreferences里，下次不用再登陆
                     if (checked){
-                        SharedPreferences.Editor editor = getSharedPreferences("studentInfo", MODE_PRIVATE).edit();
-                        editor.putBoolean("rememberPassword",true);
-                        editor.putString("objectId",student.getObjectId());
-                        editor.commit();
+                        SharedPreferences.Editor edit = ApplicationInfo.sharedPreferences.edit();
+                        edit.putBoolean("rememberPassword",true);
+                        edit.putString("objectId",student.getObjectId());
+                        edit.putString("id",student.getId());
+                        edit.commit();
                     }
                     Toast.makeText(LoginActivity.this,"欢迎:"+student.getUsername(),Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(LoginActivity.this,HomeActivity.class));
@@ -155,9 +156,6 @@ public class LoginActivity extends Activity {
 
             @Override
             public void onError(int i, String s) {
-                //登陆失败，初始化数据为空
-                String objectId = ApplicationInfo.sharedPreferences.getString("objectId", "");
-                ApplicationInfo.initStudentInfo(objectId,"","",phone,password,"", "","","");
                 hideDialog();
                 Toast.makeText(LoginActivity.this,"登陆失败"+s,Toast.LENGTH_SHORT).show();
             }

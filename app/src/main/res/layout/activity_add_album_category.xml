@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.hainiu.campuslife.activity.AddAlbumCategory">
+    tools:context="com.hainiu.campuslife.activity.AddAlbumCategoryActivity">
 
     <RelativeLayout
         android:id="@+id/xclayout2"

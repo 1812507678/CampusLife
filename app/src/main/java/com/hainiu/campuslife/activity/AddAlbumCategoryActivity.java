@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.hainiu.campuslife.application.ApplicationInfo;
 import com.hainiu.campuslife.bean.AlbumCategory;
 import com.hainu.campuslife.R;
 
@@ -20,10 +21,9 @@ import java.io.File;
 
 import cn.bmob.v3.datatype.BmobFile;
 import cn.bmob.v3.listener.SaveListener;
-import cn.bmob.v3.listener.UpdateListener;
 import cn.bmob.v3.listener.UploadFileListener;
 
-public class AddAlbumCategory extends Activity {
+public class AddAlbumCategoryActivity extends Activity {
 
     private static final String TAG = "AddAlbumCategory";
     private ImageView iv_addalbumitem_iamge;
@@ -77,22 +77,24 @@ public class AddAlbumCategory extends Activity {
                     albumCategory.setIcon(icon);
                     albumCategory.setIconUrl(icon.getUrl());
                     albumCategory.setName(name);
+                    String id = ApplicationInfo.sharedPreferences.getString("id", "");
+                    albumCategory.setUserId(id);
                     albumCategory.setAlbumId(System.currentTimeMillis()+"");
                     Log.i(TAG,albumCategory.toString());
 
                     //上传成功后,保存相册信息
-                    albumCategory.save(AddAlbumCategory.this, new SaveListener() {
+                    albumCategory.save(AddAlbumCategoryActivity.this, new SaveListener() {
                         @Override
                         public void onSuccess() {
                             hideDialog();
-                            Toast.makeText(AddAlbumCategory.this,"上传成功",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddAlbumCategoryActivity.this,"上传成功",Toast.LENGTH_SHORT).show();
                             setResult(102);
                             finish();
                         }
                         @Override
                         public void onFailure(int i, String s) {
                             hideDialog();
-                            Toast.makeText(AddAlbumCategory.this,"修改失败"+s,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddAlbumCategoryActivity.this,"修改失败"+s,Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
@@ -101,12 +103,12 @@ public class AddAlbumCategory extends Activity {
                 public void onFailure(int i, String ss) {
                     hideDialog();
                     Log.i(TAG,"上传失败error:   "+ss);
-                    Toast.makeText(AddAlbumCategory.this,"上传失败"+ss,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddAlbumCategoryActivity.this,"上传失败"+ss,Toast.LENGTH_SHORT).show();
                 }
             });
         }
         else {
-            Toast.makeText(AddAlbumCategory.this,"输入相册名称",Toast.LENGTH_SHORT).show();
+            Toast.makeText(AddAlbumCategoryActivity.this,"输入相册名称",Toast.LENGTH_SHORT).show();
         }
     }
 

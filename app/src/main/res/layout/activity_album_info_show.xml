@@ -6,17 +6,64 @@
     android:orientation="vertical"
     android:background="@drawable/xc_bg" >
 
-    <Button
-        android:id="@+id/bt_sc"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/xclayout2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/xc_sc" />
+        android:background="@drawable/top_bg"
+        android:orientation="horizontal" >
+        <!-- 添加 返回 按钮 -->
+        <ImageButton
+            android:id="@+id/xc_huitui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#0fff"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/describe"
+            android:src="@drawable/huitui" />
+        <!-- 添加文本 -->
+        <TextView
+            android:id="@+id/tv_albumshow_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="相册类别"
+            android:textSize="20sp" />
 
-    <ListView
-        android:id="@+id/lv_albumshow_shouinfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-    </ListView>
+        <!-- 添加 增加 图片按钮 -->
+        <ImageButton
+            android:id="@+id/xc_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0fff"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/describe"
+            android:onClick="uploadPicture"
+            android:src="@drawable/add" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:layout_marginRight="40dp"
+            android:layout_alignParentRight="true"
+            android:text="上传"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <ListView
+            android:id="@+id/lv_albumshow_shouinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+    </LinearLayout>
 
 </LinearLayout>

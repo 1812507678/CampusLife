@@ -2,9 +2,7 @@ package com.hainiu.campuslife.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -12,26 +10,20 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hainiu.campuslife.application.ApplicationInfo;
 import com.hainiu.campuslife.bean.AlbumCategory;
-import com.hainiu.campuslife.util.LocalCacheUtils;
 import com.hainu.campuslife.R;
 import com.lidroid.xutils.BitmapUtils;
-import com.lidroid.xutils.bitmap.BitmapDisplayConfig;
-import com.lidroid.xutils.bitmap.factory.BitmapFactory;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
+import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.listener.FindListener;
 
@@ -46,13 +38,9 @@ public class AlbumActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_album);
-
-
 		gv_album_showalbum = (GridView) findViewById(R.id.gv_album_showalbum);
 
 		initViewData();
-
-
 	}
 
 
@@ -60,6 +48,17 @@ public class AlbumActivity extends Activity {
 		albumCategoryList = new ArrayList<>();
 		//获取网络数据库中所有的相册分类信息
 		BmobQuery<AlbumCategory> bmobQuery = new BmobQuery<>();
+		String id = ApplicationInfo.sharedPreferences.getString("id","");
+
+		HashSet<String> stringHashMap = new HashSet<>();
+		stringHashMap.add("默认");
+		stringHashMap.add(id);
+
+		//查询出默认的和用户自己上传的相册
+		bmobQuery.addWhereContainedIn("userId",stringHashMap);
+
+		//Bmob批量处理数据
+		List<BmobObject> userBeans = new ArrayList<>();
 		bmobQuery.findObjects(this, new FindListener<AlbumCategory>() {
 
 			@Override
@@ -82,14 +81,16 @@ public class AlbumActivity extends Activity {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				startActivity(new Intent(AlbumActivity.this, AlbumInfoShowActivity.class));
+				Intent intent = new Intent(AlbumActivity.this, AlbumInfoShowActivity.class);
+				intent.putExtra("albumName",albumCategoryList.get(position).getName());
+				startActivity(intent);
 			}
 		});
 
 	}
 
 	public void addAlbum(View view) {
-		Intent intent = new Intent(this, AddAlbumCategory.class);
+		Intent intent = new Intent(this, AddAlbumCategoryActivity.class);
 		startActivityForResult(intent, 101);
 	}
 

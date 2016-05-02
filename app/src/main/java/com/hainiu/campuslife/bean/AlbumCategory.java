@@ -11,6 +11,7 @@ public class AlbumCategory extends BmobObject{
     private String name;
     private BmobFile icon;
     private String iconUrl;
+    private String userId;
 
     public AlbumCategory() {
     }
@@ -53,4 +54,14 @@ public class AlbumCategory extends BmobObject{
     public void setIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
     }
+
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
 }
