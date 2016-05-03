@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:id="@+id/sjitlayout" >
-    
-    <TextView 
-        android:id="@+id/sjit_tv"
-        android:layout_width="wrap_content"
+    android:background="@drawable/sjitem"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tv_bianqianitem_title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/sjitem"
+        android:gravity="center"
+        android:text="信息"
+        android:textColor="#FF7F00"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_bianqianitem_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18dp"
+        android:text="xxxxxxxxx"
+       android:maxLines="2"
+        />
+
+    <TextView
+        android:id="@+id/tv_bianqianitem_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250dp"
+        android:textSize="15dp"
+        android:textColor="#FF0000"
+        android:layout_marginTop="5dp"
+        android:text="2016.5.1"
         />
 
 </LinearLayout>

@@ -67,7 +67,8 @@
         <activity android:name="com.hainiu.campuslife.activity.AddAlbumCategoryActivity" />
         <activity android:name="com.hainiu.campuslife.activity.AlbumItemShowActivity" />
         <activity android:name="com.hainiu.campuslife.activity.AddJunkuActivity" />
-        <activity android:name="com.hainiu.campuslife.activity.EditJinukuActivity"></activity>
+        <activity android:name="com.hainiu.campuslife.activity.EditJinukuActivity" />
+        <activity android:name="com.hainiu.campuslife.activity.BianqianInfoShowActivity"></activity>
     </application>
 
 </manifest>
