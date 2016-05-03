@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/jkclayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical" >
 
     <RelativeLayout
@@ -13,6 +13,7 @@
         android:orientation="horizontal" >
         <!-- 添加 返回 按钮 -->
         <ImageButton
+            android:id="@+id/xc_huitui"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -27,15 +28,65 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:paddingTop="10dp"
-            android:text="添加花费"
+            android:text="编辑金库"
             android:textSize="20sp" />
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="5dp">
+        android:text="修改金库信息："
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/jkaddlayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/jkaddlayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="金库名称"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ed_jinkuedit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:minWidth="150dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/jkaddlayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="金库总额"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ed_jinkuedit_totlacount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:minWidth="150dp" />
+        </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,68 +95,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/jk_xm2"
+                android:text="金余额"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/ed_jinkuadd_name"
+                android:id="@+id/ed_jinkuedit_balancecount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint=""
                 android:minWidth="150dp" />
         </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="选择日期:"
-            android:textSize="20sp" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-
-            <!-- 此处想放置一个TimePicker -->
-            <DatePicker
-                android:id="@+id/dp_jinkuadd_data"
-                android:layout_width="wrap_content"
-                android:layout_height="150dp"
-                android:datePickerMode="spinner"
-                android:calendarViewShown="false">
-            </DatePicker>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/jk_hf2"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/ed_jinkuadd_moey"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint=""
-                android:minWidth="150dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/jk_yuan"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-
     </LinearLayout>
 
-
     <LinearLayout
+        android:id="@+id/jkaddlayout7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -117,8 +120,9 @@
             android:layout_margin="10dp"
             android:background="#0fff"
             android:contentDescription="@string/describe"
-            android:src="@drawable/sure2"
-            android:onClick="confirmAdd"/>
+            android:onClick="editJinkuConfirm"
+            android:src="@drawable/sure2" />
     </LinearLayout>
+
 
 </LinearLayout>

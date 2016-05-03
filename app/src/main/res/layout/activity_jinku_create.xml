@@ -1,172 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/jkclayout"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/jkc_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:id="@+id/jkclayout2"
+    <RelativeLayout
+        android:id="@+id/xclayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/top_bg"
         android:orientation="horizontal" >
-
+        <!-- 添加 返回 按钮 -->
         <ImageButton
-            android:id="@+id/jkc_huitui"
+            android:id="@+id/xc_huitui"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="#0fff"
+            android:layout_centerVertical="true"
             android:contentDescription="@string/describe"
             android:src="@drawable/huitui" />
-
+        <!-- 添加文本 -->
         <TextView
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:paddingTop="5dp"
-            android:text="@string/jk_edit"
+            android:paddingTop="10dp"
+            android:text="创建金库"
             android:textSize="20sp" />
-
-        <ImageButton
-            android:id="@+id/jkc_add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="#0fff"
-            android:contentDescription="@string/describe"
-            android:src="@drawable/add" />
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/jkclayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/jk_leibie"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/jkc_lb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/jk_hint.1"
-            android:minWidth="200sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/jkclayout4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/jk_zonge"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/jkc_ze"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/jk_hint.2"
-            android:minWidth="60sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20sp"
-            android:text="@string/jk_yue"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/jkc_ye"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/jk_hint.3"
-            android:minWidth="60sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/jkclayout5"
-        android:layout_width="300dp"
-        android:layout_height="280dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:orientation="vertical" >
-
-        <LinearLayout
-            android:id="@+id/jkclayout6"
-            android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/jk_rq" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/jk_hf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/jk_xm" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/jkclayout7"
-            android:layout_width="fill_parent"
-            android:layout_height="250dp" >
-
-            <ListView
-                android:id="@+id/jk_lv"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-            </ListView>
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/jkclayout8"
+        android:id="@+id/jkaddlayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="5dp" >
+        android:layout_margin="20dp"
+        android:orientation="vertical" >
 
-        <ImageButton
-            android:id="@+id/jkc_bj"
+        <LinearLayout
+            android:id="@+id/jkaddlayout4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#0fff"
-            android:contentDescription="@string/describe"
-            android:src="@drawable/edit" />
+            android:orientation="horizontal" >
 
-        <ImageButton
-            android:id="@+id/jkc_zj"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="金库名称"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ed_jinkucreate_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:minWidth="150dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/jkaddlayout5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:background="#0fff"
-            android:contentDescription="@string/describe"
-            android:src="@drawable/zengjia"
-            android:onClick="addjinkuiitem" />
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="金库总额"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ed_jinkucreate_totlacount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:minWidth="150dp" />
+        </LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jkaddlayout7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#0fff"
+            android:contentDescription="@string/describe"
+            android:onClick="crateJinkuConfirm"
+            android:src="@drawable/sure2" />
+    </LinearLayout>
+
 
 </LinearLayout>

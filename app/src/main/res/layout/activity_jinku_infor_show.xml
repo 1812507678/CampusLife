@@ -1,17 +1,176 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/jkclayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hainiu.campuslife.activity.JinkuInforShowActivity" >
+    android:orientation="vertical" >
+    <!--android:background="@drawable/jkc_bg"-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="金库信息" />
-    <ListView 
-        android:id="@+id/lv_jinukuinfor_showitem"
+
+    <RelativeLayout
+        android:id="@+id/xclayout2"
         android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
-        ></ListView>
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bg"
+        android:orientation="horizontal" >
+        <!-- 添加 返回 按钮 -->
+        <ImageButton
+            android:id="@+id/xc_huitui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#0fff"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/describe"
+            android:src="@drawable/huitui" />
+        <!-- 添加文本 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="账单编辑"
+            android:textSize="20sp" />
+    </RelativeLayout>
 
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/jkclayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jk_leibie"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_jinkuinfo_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xx"
+            android:minWidth="200sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jkclayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jk_zonge"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_jinkuinfo_totalt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="60sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:text="@string/jk_yue"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_jinkuinfo_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="60sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            android:background="#FFEC8B">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/jk_rq"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/jk_hf"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/jk_xm"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FAEBD7">
+            <ListView
+                android:id="@+id/lv_jinkuinfor_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp">
+            <ImageButton
+                android:id="@+id/jkc_bj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0fff"
+                android:contentDescription="@string/describe"
+                android:src="@drawable/edit"
+                android:onClick="editjinku"/>
+
+            <ImageButton
+                android:id="@+id/jkc_zj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0fff"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@string/describe"
+                android:src="@drawable/zengjia"
+                android:onClick="addjinkuiitem" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

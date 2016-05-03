@@ -65,7 +65,9 @@
         <activity android:name="com.hainiu.campuslife.activity.RegisterActivity" />
         <activity android:name="com.hainiu.campuslife.activity.RetrievePasswordActivity" />
         <activity android:name="com.hainiu.campuslife.activity.AddAlbumCategoryActivity" />
-        <activity android:name="com.hainiu.campuslife.activity.AlbumItemShowActivity"></activity>
+        <activity android:name="com.hainiu.campuslife.activity.AlbumItemShowActivity" />
+        <activity android:name="com.hainiu.campuslife.activity.AddJunkuActivity" />
+        <activity android:name="com.hainiu.campuslife.activity.EditJinukuActivity"></activity>
     </application>
 
 </manifest>

@@ -57,8 +57,6 @@ public class AlbumActivity extends Activity {
 		//查询出默认的和用户自己上传的相册
 		bmobQuery.addWhereContainedIn("userId",stringHashMap);
 
-		//Bmob批量处理数据
-		List<BmobObject> userBeans = new ArrayList<>();
 		bmobQuery.findObjects(this, new FindListener<AlbumCategory>() {
 
 			@Override

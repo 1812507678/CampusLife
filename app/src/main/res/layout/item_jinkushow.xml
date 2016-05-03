@@ -3,29 +3,39 @@
     android:id="@+id/jkcilayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:orientation="horizontal"
+    android:padding="5dp">
 
     <!-- 展示日期 -->
 
     <TextView
-        android:id="@+id/jkci_rq"
-        android:layout_width="100dp"
+        android:id="@+id/tv_itemshow_date"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="30dp" 
-        android:text="2016.4.29"/>
+        android:text="2016.4.29"
+        android:textSize="15sp"
+        android:gravity="center"/>
     <!-- 展示花费 -->
 
     <TextView
-        android:id="@+id/jkci_hf"
-        android:layout_width="100dp"
+        android:id="@+id/tv_itemshow_paycount"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="30dp"
-         android:text="100元" />
+         android:text="100元"
+        android:textSize="15sp"
+        android:gravity="center"/>
     <!-- 展示项目 -->
 
     <TextView
-        android:id="@+id/jkci_xm"
-        android:layout_width="100dp"
+        android:id="@+id/tv_itemshow_paysubject"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="30dp" 
-        android:text="吃饭"/>
+        android:text="吃饭"
+        android:textSize="15sp"
+        android:gravity="center"/>
 
 
 </LinearLayout>

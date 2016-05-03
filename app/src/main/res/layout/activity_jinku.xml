@@ -3,58 +3,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/jkc_bg"
     android:id="@+id/jklayout" >
+    <!--android:background="@drawable/jkc_bg"-->
 
-
-
-    <LinearLayout 
+    <RelativeLayout
+        android:id="@+id/xclayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/top_bg"
-        android:orientation="horizontal"
-                >
+        android:orientation="horizontal" >
         <!-- 添加 返回 按钮 -->
         <ImageButton
-            android:id="@+id/jk_huitui"
+            android:id="@+id/xc_huitui"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:src="@drawable/huitui"
-            android:contentDescription="@string/describe"
-            android:layout_marginStart="5dp"
-            />
-		
-        <!-- 添加 信封 文本 -->
-        
-        <TextView
-            android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:text="@string/jk_xinfeng"
-            android:textSize="25sp" 
+            android:layout_margin="5dp"
+            android:background="#0fff"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/describe"
+            android:src="@drawable/huitui" />
+        <!-- 添加文本 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:paddingTop="5dp"/>
-        
-        <!-- 添加 增加 文本 -->
-        
+            android:paddingTop="10dp"
+            android:text="@string/jk_xinfeng"
+            android:textSize="20sp" />
+        <!-- 添加 增加 图片按钮 -->
         <ImageButton
+            android:id="@+id/xc_add"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:src="@drawable/add"
-            android:layout_marginEnd="2dp"
+            android:layout_height="wrap_content"
+            android:background="#0fff"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
             android:contentDescription="@string/describe"
             android:onClick="createjinku"
-            />
-        
+            android:src="@drawable/add" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+        <GridView
+            android:id="@+id/gv_jinku_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="20dp"
+            android:numColumns="2"
+            android:verticalSpacing="10dp"></GridView>
     </LinearLayout>
-    
-    <GridView 
-        android:id="@+id/gv_jinku_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:numColumns="2"
-        android:horizontalSpacing="20dp"
-        android:verticalSpacing="10dp"
-        ></GridView>
-    
+
 
 </LinearLayout>
