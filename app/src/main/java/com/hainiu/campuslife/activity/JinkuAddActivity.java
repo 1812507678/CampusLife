@@ -64,12 +64,15 @@ public class JinkuAddActivity extends Activity {
 			@Override
 			public void onSuccess() {
 				String blanceAmount = intent.getStringExtra("blanceAmount");
+				String totalAmount = intent.getStringExtra("totalAmount");
 				String objectId = intent.getStringExtra("objectId");
 
 				JinkuCategory jinkuCategory = new JinkuCategory();
 				final int blance = Integer.parseInt(blanceAmount) - Integer.parseInt(money);
 				jinkuCategory.setBlanceAmount(blance);
+				jinkuCategory.setTotalAmount(Integer.parseInt(totalAmount));
 				jinkuCategory.setObjectId(objectId);
+
 				jinkuCategory.update(JinkuAddActivity.this, new UpdateListener() {
 					@Override
 					public void onSuccess() {

@@ -6,53 +6,83 @@
     android:background="@drawable/rl_bg"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:id="@+id/rwlayout2"
+    <RelativeLayout
+        android:id="@+id/xclayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/top_bg2"
+        android:background="@drawable/top_bg"
         android:orientation="horizontal" >
-
+        <!-- 添加 返回 按钮 -->
         <ImageButton
-            android:id="@+id/rw_huitui"
+            android:id="@+id/xc_huitui"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="#0fff"
+            android:layout_centerVertical="true"
             android:contentDescription="@string/describe"
-            android:src="@drawable/huitui" 
-            android:onClick="addTask"/>
-
+            android:src="@drawable/huitui" />
+        <!-- 添加文本 -->
         <TextView
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:paddingTop="5dp"
-            android:text="@string/rw"
+            android:paddingTop="10dp"
+            android:text="所有任务"
             android:textSize="20sp" />
-
+        <!-- 添加 增加 图片按钮 -->
         <ImageButton
-            android:id="@+id/rw_add"
+            android:id="@+id/xc_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
             android:background="#0fff"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
             android:contentDescription="@string/describe"
+            android:onClick="addTask"
             android:src="@drawable/add" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <!-- 展示日期 -->
+
+        <TextView
+            android:id="@+id/tv_taskremind_date"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:text="提醒时间"
+            android:textSize="20sp"
+            android:gravity="center"/>
+        <!-- 展示花费 -->
+
+        <TextView
+            android:id="@+id/tv_taskremind_subject"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:text="事项"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/rwlayout3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:padding="5dp">
 
         <ListView
             android:id="@+id/lv_taskmanage_showtask"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
         </ListView>
     </LinearLayout>
 

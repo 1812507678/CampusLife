@@ -5,6 +5,32 @@
     android:layout_height="match_parent"
     android:background="@drawable/rl_bg"
     android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/xclayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bg"
+        android:orientation="horizontal" >
+        <!-- 添加 返回 按钮 -->
+        <ImageButton
+            android:id="@+id/xc_huitui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#0fff"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/describe"
+            android:src="@drawable/huitui" />
+        <!-- 添加文本 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="日历"
+            android:textSize="20sp" />
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/rllayout2"
@@ -13,19 +39,20 @@
         android:layout_gravity="center"
         android:orientation="vertical" >
 
-        <TextView
-            android:layout_width="240dp"
-            android:layout_height="250dp"
-            android:gravity="center"
-            android:text="@string/rl1"
-            android:textSize="30sp" />
+        <DatePicker
+            android:id="@+id/dp_calender_date"
+            android:layout_width="wrap_content"
+            android:layout_height="390dp"
+            >
+        </DatePicker>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/rllayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
         android:orientation="vertical" >
 
         <LinearLayout
@@ -37,14 +64,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/rl_rw" />
+                android:textSize="20sp"
+                android:textColor="#8A2BE2"
+                android:text="今日任务： " />
 
-            <EditText
-                android:id="@+id/rl_rw"
+            <TextView
+                android:id="@+id/tv_calender_task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint=""
-                android:minWidth="200dp" />
+                android:textSize="20sp"
+                android:textColor="#8A2BE2"
+                android:text="无."/>
         </LinearLayout>
 
         <LinearLayout
@@ -56,17 +86,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/rl_tx" />
+                android:textSize="20sp"
+                android:textColor="#8A2BE2"
+                android:text="今日提醒： " />
 
-            <EditText
-                android:id="@+id/rl_tx"
+            <TextView
+                android:id="@+id/tv_calender_remind"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint=""
-                android:minWidth="200dp" />
+                android:textSize="20sp"
+                android:textColor="#8A2BE2"
+                android:text="无." />
         </LinearLayout>
-
-        <LinearLayout
+       <!-- <LinearLayout
             android:id="@+id/rllayout6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -99,7 +131,18 @@
                 android:text="@string/rl_xc"
                 android:textColor="#338af5"
                 android:textSize="20sp" />
-        </LinearLayout>
+        </LinearLayout>-->
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_background_confirm"
+            android:layout_alignParentBottom="true"
+            android:onClick="inquiry"
+            android:text="查询"/>
+    </RelativeLayout>
 </LinearLayout>

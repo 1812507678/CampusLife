@@ -148,6 +148,7 @@ public class AlbumInfoShowActivity extends Activity {
 				SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");//转换格式
 				String formatData = sdf.format(date);
 				albumPicture.setTime(formatData);
+				albumPicture.setType(albumName);
 
 				//相册时间表中没有这条数据，加入
 				AlbumPictureTimeList albumPictureTimeList = new AlbumPictureTimeList();
@@ -264,31 +265,32 @@ public class AlbumInfoShowActivity extends Activity {
 			bmobQuery.findObjects(AlbumInfoShowActivity.this, new FindListener<AlbumPicture>() {
 				@Override
 				public void onSuccess(List<AlbumPicture> list) {
-					bitmapUtils.display(iv_albuminfo_picture1,list.get(0).getPictureUrl());
-					int size = list.size();
-					switch (size){
-						case 0:
-							break;
-						case 1:
-							bitmapUtils.display(iv_albuminfo_picture1,list.get(0).getPictureUrl());
-							break;
-						case 2:
-							bitmapUtils.display(iv_albuminfo_picture1,list.get(0).getPictureUrl());
-							bitmapUtils.display(iv_albuminfo_picture2,list.get(1).getPictureUrl());
-							break;
-						case 3:
-							bitmapUtils.display(iv_albuminfo_picture1,list.get(0).getPictureUrl());
-							bitmapUtils.display(iv_albuminfo_picture2,list.get(1).getPictureUrl());
-							bitmapUtils.display(iv_albuminfo_picture3,list.get(2).getPictureUrl());
-							break;
-						case 4:
-							bitmapUtils.display(iv_albuminfo_picture1,list.get(0).getPictureUrl());
-							bitmapUtils.display(iv_albuminfo_picture2,list.get(1).getPictureUrl());
-							bitmapUtils.display(iv_albuminfo_picture3,list.get(2).getPictureUrl());
-							bitmapUtils.display(iv_albuminfo_picture4,list.get(3).getPictureUrl());
-							break;
+					if (list.size()!=0){
+						bitmapUtils.display(iv_albuminfo_picture1,list.get(0).getPictureUrl());
+						int size = list.size();
+						switch (size){
+							case 0:
+								break;
+							case 1:
+								bitmapUtils.display(iv_albuminfo_picture1,list.get(0).getPictureUrl());
+								break;
+							case 2:
+								bitmapUtils.display(iv_albuminfo_picture1,list.get(0).getPictureUrl());
+								bitmapUtils.display(iv_albuminfo_picture2,list.get(1).getPictureUrl());
+								break;
+							case 3:
+								bitmapUtils.display(iv_albuminfo_picture1,list.get(0).getPictureUrl());
+								bitmapUtils.display(iv_albuminfo_picture2,list.get(1).getPictureUrl());
+								bitmapUtils.display(iv_albuminfo_picture3,list.get(2).getPictureUrl());
+								break;
+							case 4:
+								bitmapUtils.display(iv_albuminfo_picture1,list.get(0).getPictureUrl());
+								bitmapUtils.display(iv_albuminfo_picture2,list.get(1).getPictureUrl());
+								bitmapUtils.display(iv_albuminfo_picture3,list.get(2).getPictureUrl());
+								bitmapUtils.display(iv_albuminfo_picture4,list.get(3).getPictureUrl());
+								break;
+						}
 					}
-
 				}
 
 				@Override

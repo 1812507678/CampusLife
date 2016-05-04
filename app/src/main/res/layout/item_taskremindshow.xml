@@ -9,32 +9,22 @@
     <!-- 展示日期 -->
 
     <TextView
-        android:id="@+id/tv_itemshow_date"
+        android:id="@+id/tv_taskremind_date"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="30dp" 
         android:text="2016.4.29"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:gravity="center"/>
     <!-- 展示花费 -->
 
     <TextView
-        android:id="@+id/tv_itemshow_paycount"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="30dp"
-         android:text="100元"
-        android:textSize="15sp"
-        android:gravity="center"/>
-    <!-- 展示项目 -->
-
-    <TextView
-        android:id="@+id/tv_itemshow_paysubject"
+        android:id="@+id/tv_taskremind_subject"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="30dp" 
-        android:text="吃饭"
-        android:textSize="15sp"
+        android:text="xxxxx"
+        android:textSize="20sp"
         android:gravity="center"/>
-
+    
 </LinearLayout>

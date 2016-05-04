@@ -38,7 +38,7 @@ public class JinkuCreateActivity extends Activity {
 		JinkuCategory jinkuCategory = new JinkuCategory();
 		jinkuCategory.setName(name);
 		jinkuCategory.setTotalAmount(Integer.parseInt(totlacount));
-		jinkuCategory.setBlanceAmount(0);
+		jinkuCategory.setBlanceAmount(Integer.parseInt(totlacount));
 		jinkuCategory.setCategroyId(System.currentTimeMillis()+"");
 		String id = ApplicationInfo.sharedPreferences.getString("id","");
 		jinkuCategory.setUserId(id);

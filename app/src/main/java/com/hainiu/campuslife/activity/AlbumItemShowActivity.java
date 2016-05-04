@@ -1,7 +1,7 @@
 package com.hainiu.campuslife.activity;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +20,7 @@ import java.util.List;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.listener.FindListener;
 
-public class AlbumItemShowActivity extends ActionBarActivity {
+public class AlbumItemShowActivity extends Activity {
 
     private ListView lv_albumitem_item;
     private List<AlbumPicture> albumPictureList;

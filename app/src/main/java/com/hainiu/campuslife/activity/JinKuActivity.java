@@ -70,7 +70,7 @@ public class JinKuActivity extends Activity {
 				intent.putExtra("blanceAmount",jinkuCategory.getBlanceAmount()+"");
 				intent.putExtra("objectId",jinkuCategory.getObjectId());
 
-				startActivity(intent);
+				startActivityForResult(intent,150);
 			}
 		});
 		
@@ -89,6 +89,10 @@ public class JinKuActivity extends Activity {
 		if (requestCode==110 && resultCode==111){
 			initView();
 		}
+		else if (requestCode==150){
+			initView();
+		}
+
 	}
 	
 	

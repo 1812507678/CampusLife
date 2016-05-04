@@ -82,6 +82,7 @@ public class JinkuInforShowActivity extends Activity {
 		Intent intent = new Intent(this, JinkuAddActivity.class);
 		intent.putExtra("name",name);
 		intent.putExtra("blanceAmount",blanceAmount+"");
+		intent.putExtra("totalAmount",totalAmount+"");
 		intent.putExtra("objectId",objectId);
 		startActivityForResult(intent,120);
 
@@ -90,8 +91,8 @@ public class JinkuInforShowActivity extends Activity {
 	public void editjinku(View view){
 		Intent intent = new Intent(this, EditJinukuActivity.class);
 		intent.putExtra("name",name);
-		intent.putExtra("totalAmount",totalAmount+"");
 		intent.putExtra("blanceAmount",blanceAmount+"");
+		intent.putExtra("totalAmount",totalAmount+"");
 		intent.putExtra("objectId",objectId);
 		startActivityForResult(intent,130);
 	}
@@ -108,8 +109,8 @@ public class JinkuInforShowActivity extends Activity {
 		}
 		else if (requestCode==130 && resultCode==131){
 			name = data.getStringExtra("name");
-			totalAmount = data.getStringExtra("totalAmount");
 			blanceAmount = data.getStringExtra("blanceAmount");
+			totalAmount = data.getStringExtra("totalAmount");
 			tv_jinkuinfo_type.setText(name);
 			tv_jinkuinfo_totalt.setText(totalAmount);
 			tv_jinkuinfo_balance.setText(blanceAmount);

@@ -140,14 +140,16 @@ public class LoginActivity extends Activity {
                     saveToApplication(student);
 
                     boolean checked = ck_login_savepassword.isChecked();
+
+                    SharedPreferences.Editor edit = ApplicationInfo.sharedPreferences.edit();
                     //选择记住密码，保存SharedPreferences里，下次不用再登陆
                     if (checked){
-                        SharedPreferences.Editor edit = ApplicationInfo.sharedPreferences.edit();
                         edit.putBoolean("rememberPassword",true);
-                        edit.putString("objectId",student.getObjectId());
-                        edit.putString("id",student.getId());
-                        edit.commit();
                     }
+                    edit.putString("objectId",student.getObjectId());
+                    edit.putString("id",student.getId());
+                    edit.commit();
+
                     Toast.makeText(LoginActivity.this,"欢迎:"+student.getUsername(),Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(LoginActivity.this,HomeActivity.class));
                     finish();
