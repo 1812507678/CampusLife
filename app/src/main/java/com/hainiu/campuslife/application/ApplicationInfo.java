@@ -8,6 +8,9 @@ import android.util.Log;
 
 import com.hainiu.campuslife.bean.Student;
 
+import net.youmi.android.AdManager;
+import net.youmi.android.spot.SpotManager;
+
 import cn.bmob.v3.Bmob;
 
 /**
@@ -30,6 +33,13 @@ public class ApplicationInfo extends Application{
 
         // 初始化 Bmob SDK
         Bmob.initialize(this, "d8ce0167b5dcba386a96649b4d9ad0d6");
+
+        //初始化有米广告
+        String appId= "4c14d04b6f8362e9";
+        String appSecret = "ab42475b0fbf0120";
+        AdManager.getInstance(this).init(appId, appSecret, false);
+
+
     }
 
     //初始化用户数据
