@@ -85,7 +85,8 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ck_login_savepassword"/>
+            android:id="@+id/ck_login_savepassword"
+            android:checked="false" />
     </LinearLayout>
 
     <Button
@@ -131,32 +132,6 @@
     </LinearLayout>
 
 
-    <!-- 微博和QQ登录  -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:id="@+id/relativeLayout">
-        <Button
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/third_login_weibo"
-            android:onClick="weiboLogin"
-            android:id="@+id/button_weibo_login"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/button_qq_login"
-            android:layout_marginEnd="25dp" />
-        <Button
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/third_login_qq"
-            android:onClick="qqLogin"
-            android:id="@+id/button_qq_login"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="127dp" />
 
-    </RelativeLayout>
 
 </RelativeLayout>

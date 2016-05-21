@@ -5,9 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -41,6 +43,9 @@ public class AlbumActivity extends Activity {
 		gv_album_showalbum = (GridView) findViewById(R.id.gv_album_showalbum);
 
 		initViewData();
+
+
+
 	}
 
 

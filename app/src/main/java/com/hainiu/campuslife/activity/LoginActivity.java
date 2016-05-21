@@ -44,7 +44,7 @@ public class LoginActivity extends Activity {
     }
 
     private void judgIsLogin() {
-        //先判断是否登陆过
+        //先判断是否登陆过studentInfo.xml
         SharedPreferences sharedPreferences = getSharedPreferences("studentInfo", MODE_PRIVATE);
         boolean isRememberInf = sharedPreferences.getBoolean("rememberPassword", false);
         String objectId = sharedPreferences.getString("objectId", "");

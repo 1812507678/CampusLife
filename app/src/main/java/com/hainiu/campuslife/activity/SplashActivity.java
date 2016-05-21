@@ -6,7 +6,9 @@ import android.os.Bundle;
 
 import com.hainu.campuslife.R;
 
+import net.youmi.android.AdManager;
 import net.youmi.android.spot.SpotManager;
+
 
 public class SplashActivity extends Activity {
 
@@ -21,7 +23,7 @@ public class SplashActivity extends Activity {
             public void run() {
                 super.run();
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -36,7 +38,7 @@ public class SplashActivity extends Activity {
             }
         }.start();
 
-        SpotManager.getInstance(this).loadSpotAds();
+
         SpotManager.getInstance(this).setSpotOrientation(SpotManager.ORIENTATION_PORTRAIT);
         SpotManager.getInstance(this).setAnimationType(SpotManager.ANIM_SIMPLE);
         SpotManager.getInstance(this).showSpotAds(this);
